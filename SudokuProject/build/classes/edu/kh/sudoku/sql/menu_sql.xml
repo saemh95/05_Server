@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
-<properties>
-<comment>menu_sql.xml file!!</comment>
-<entry key="getMenu">SELECT MENU_NAME, MENU_LINK FROM MENU_LIST</entry>
-<entry key="getPlay">SELECT DIFFICULTY_NAME, DIFFICULTY_LINK FROM DIFFICULTY</entry>
-<entry key="getStats">SELECT GAMES_PLAYED, SHORTEST, LONGEST FROM STATS WHERE MEMBER_NO = ?</entry>
-</properties>
