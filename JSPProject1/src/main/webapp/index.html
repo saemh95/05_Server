@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP Project1</title>
+</head>
+<body>
+    <h1>login test</h1>
+
+    <pre>
+        Insert ID/PW -> user01/pass01 "login success"
+        if not "Incorrect ID or PW"
+    </pre>
+
+    <form action="/login" method="post">
+        ID : <input type="text" name="id">
+        PW : <input type="password" name="pw">
+        <button>login</button>
+    </form>
+    <hr>
+    <h1>a tag click</h1>
+    <h3>a tag, js(location) code request -> method get</h3>
+    
+    <a href="/test/result">Page-2</a>
+    <hr>
+    <h1>Pizza Order</h1>
+
+    <form action="/pizzaOrder" method="post">
+        Pizza : <select name="pizza">
+            <option value="1">Cheese Pizza (8,000)</option>
+            <option value="2">Bacon Pizza (10,000)</option>
+            <option value="3">Napolitan Pizza (13,000)</option>
+        </select>
+        <br><br>
+        Size : <br>
+        <label for="">
+            Regular <input type="radio" name="size" value="R">
+        </label>
+        <label for="">
+            Large <input type="radio" name="size" value="L">
+        </label>
+        <label for="">
+            Family <input type="radio" name="size" value="F">
+        </label>
+        <br><br>
+
+        Amount :
+        <button id="minus" type="button">-</button>
+        <span id="amount">0</span>
+        <button id="plus" type="button">+</button>
+        <input type="hidden" name="amount" value="0">
+        <br><br>
+        <button>Order</button>
+    </form>
+
+    <script>
+        const plus = document.getElementById("plus");
+        const minus = document.getElementById("minus");
+        const amount = document.getElementById("amount");
+        const input = document.querySelector("[name='amount']");
+        plus.addEventListener("click", () => {
+            amount.innerText++;
+            input.value = amount.innerText;
+        });
+        minus.addEventListener("click", () => {
+            if (amount.innerText == 0) return;
+
+            amount.innerText--;
+            input.value = amount.innerText;
+        });
+    </script>
+</body>
+</html>
