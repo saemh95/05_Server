@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servlet Project</title>
+</head>
+<body>
+   <h1>
+    Saem Hong
+   </h1> 
+   <h2>
+    names (index / default) -> containing html,jsp,htm is main page
+   </h2>
+   <h3>
+    web.xml -> info of main page
+   </h3>
+   <hr>
+   <h1>
+    Server submission test 1
+   </h1>
+   <pre>
+        Name and age -> button press ->
+        1) form tag -> input tag -> submit to a directory
+        - action : directory
+        - method : submit type (get/post)
+        submit == client -> request -> server
+        2) input tag : data retreaval
+        - name == key when submit -> server
+        - value == (value)data insert -> server
+
+        <!-- <input name="inputName" value="squid"> -->
+        get -> ?inputName=squid / ex) www.example.com/?inputName1=squid&inputName2=crab
+        server -> parameter = inputName1/inputName2 -> values squid/crab
+   </pre>
+   <form action="/example1" method="get">
+        Name : <input type="text" name="inputName">
+        <br>
+        Age : <input type="number" name="inputAge">
+        <br>
+        <button type="submit">Submit</button>
+
+   </form>
+
+   <hr>
+   <h1>POST request -> response</h1>
+   <pre>
+        submit -> not directory but (http body)
+   </pre>
+
+   <h3>SignUp</h3>
+   <form action="/signUp" method="post">
+     ID : <input type="text" name="inputId" required> <br>
+     PW : <input type="password" name="inputPw" required> <br>
+     PW check : <input type="password" required> <br>
+     Name : <input type="text" name="inputName" required> <br>
+
+     Self-Introduction(Optional) <br>
+     <textarea name="intro" cols="30" rows="5"></textarea> <br>
+     <button>SignUp</button>
+   </form>
+
+   <hr>
+   <h1>Coffee Order</h1>
+   <form action="/coffee" method="get">
+
+     OrderName : <input type="text" name="orderName"> <br>
+     Coffee : <select name="coffee">
+          <option>Americano</option>
+          <option>DeCaf</option>
+          <option>Black</option>
+          <option>Cold Brew</option>
+          <option>Blended</option>
+     </select>
+     <br><br>
+     ICE <input type="radio" name="type" value="ice">
+     HOT <input type="radio" name="type" value="hot">
+     <br>
+     Option <br>
+     Add Shot <input type="checkbox" name="opt" value="shot">
+     <br>
+     Less Shot <input type="checkbox" name="opt" value="mild">
+     <br><br>
+     <button>Order</button>
+   </form>
+
+   <form action="/hello" method="get">
+
+     NAME : <input type="text" name="inpName">
+     PW : <input type="text" name="inpPw">
+     <button>Submit</button>
+
+   </form>
+   <form action="/test" method="get">
+
+     NAME : <input type="text" name="inpName1">
+     PW : <input type="text" name="inpPw1">
+     <button>Submit</button>
+
+   </form>
+</body>
+</html>
