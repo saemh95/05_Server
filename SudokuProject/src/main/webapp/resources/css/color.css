@@ -1,0 +1,14 @@
+:root {
+    --black: #212125;
+    --cyan: #00BFB2;
+    --dark-grey: #626262;
+    --westar: #E5E3DB;
+    --off-white: #F8F8F8;
+    
+}
+
+body {
+    background-color: var(--westar); 
+    color: var(--sand);
+    
+}
