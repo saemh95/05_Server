@@ -1,0 +1,23 @@
+:root {
+    --font-primary: 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--wester);
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--sand);
+    margin-bottom: 0.5em;
+}
+a {
+    text-decoration: none;
+    color: #000; 
+    transition: color 0.3s; 
+}
+
+a:hover, a:focus {
+    color: var(--off-white);
+}
